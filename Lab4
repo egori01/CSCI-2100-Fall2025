@@ -1,0 +1,49 @@
+
+#include <iostream>
+using namespace std;
+class lab4 {
+  public:
+    
+
+
+};
+
+int main()
+{
+
+
+        int index =0;
+        int arrayValue[15];
+        bool arrayBool[15];
+        int n;
+        
+    for (int i = 0; i < 15; i++){
+        arrayBool[i] = false; // bool is all false
+    }
+    while (true) {
+        cin >> n;
+        if (n == -1) {return 0;}
+        if (n == 0) {break;}
+        arrayValue[index]= n;
+        arrayBool[index] = true;
+        //num.push_back(n);
+        index++;
+    
+    index = 0; 
+    if (index >= 15){
+      break;  
+    }
+    }
+
+        // initialize array of object for each trip
+        int count =0;
+        for( int i = 0; i < index; i++){
+            for (int j = 0; j < index; j++){
+                if ( arrayValue[i] == 2*arrayValue[j] && i!= j){
+                    count++;
+                }
+            }
+        }
+        cout << count << endl;
+    return count;
+}
